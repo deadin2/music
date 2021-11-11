@@ -55,7 +55,36 @@
             bottom: 5%;
             opacity: 0;
         }
+        .loader-gif{
+            max-width: 30%;
+            position: absolute;
+            left: 34.5%;
+            top: 30%;
+        }
+        #preloader{
+            background: #000;
+            background-size: 30%;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+            visibility: visible;
+            animation: none;
+        }
+        @keyframes fadeOut{
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 0;
+        }
     }
+        }
+        .loader-para{
+            font-size: 10px;
+            left: 43%;
+            top: 45%;
+        }
     @media all and (min-width: 1366px){
         .img2{
             position: absolute;
@@ -64,71 +93,117 @@
             bottom: 16%;
             opacity: 0;
         }
-        div{
-            float: right;
+        .loader-gif{
+            max-width: 10%;
+            position: absolute;
+            left: 44%;
+            top: 40%;
+        }
+        #preloader{
+            background: #000;
+            background-size: 10%;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+            visibility: visible;
+            animation: none;
+            transition: opacity 1s;
+        }
+        .loader-para{
+            font-size: large;
+            left: 46.3%;
+            top: 58%;
+    }
+    @keyframes fadeOut{
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 0;
         }
     }
+    }
+
+    @keyframes fadeOut{
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 0;
+        }
+    }
+
+
 </style>
-<script type="text/javascript" src="https://www.dl.dropboxusercontent.com/s/i76sf28gezgpwlc/script.js?dl=0"></script>
+<script type="text/javascript" src="/script.js"></script>
 <body style="background-color: #1c1c19;" >
-    <div class="container-fluid pt-10 m1" >
+    
+    <div id="preloader" class="preloader" style="display: shown;">
+        <img class="loader-gif" src="/Icons/loading.gif">
+        <p class="loader-para">Loading...</p>
+    </div>
+    <div class="m1" >
         <img class="img1" src="https://upload.wikimedia.org/wikipedia/en/1/1d/24kGoldn_-_Mood.png" height="200" width="200">
         <p style="display: inline;" class="test1">24kgoldn - Mood</p>
-        <img onclick="tt1();counter1()" class="img2" src="https://www.dl.dropboxusercontent.com/s/3s2kxyvi81386hn/Play.png?dl=0" width="140" height="140">
+        <img onclick="tt1();counter1();plswork()" class="img2" src="https://www.dl.dropboxusercontent.com/s/3s2kxyvi81386hn/Play.png?dl=0" width="140" height="140">
         <audio id="audio1" src="https://www.dl.dropboxusercontent.com/s/d5ouyym55rivtjh/Mood.mp3?dl=0"></audio>
     </div>
-    <div class="container-fluid pt-10 m1">
+    <div class="m1">
         <img class="img1" src="https://www.dl.dropboxusercontent.com/s/0b1uc3iz2jwgdhz/Locked-Away-Dancehall-Remix-Single-cover.jpg?dl=0" width="200" height="200">
         <p style="display: inline;" class="test1">Adam Lang - Locked Away</p>
         <img onclick="tt2();counter2()" class="img2" src="https://www.dl.dropboxusercontent.com/s/3s2kxyvi81386hn/Play.png?dl=0" width="140" height="140">
         <audio id="audio2" src="https://www.dl.dropboxusercontent.com/s/r9noavcpltqbasg/Adam%20Lang%20-%20Locked%20Away.mp3?dl=0"></audio>
     </div>
-    <div class="container-fluid  pt-10 m1">
+    <div class="m1" >
         <img class="img1" src="https://dl.dropboxusercontent.com/s/ivlxpabm306g1uo/Banners%20-%20Someone%20To%20You.jpg?dl=0" width="200" height="200">
         <p style="display: inline;" class="test1">Banners - Someone To You</p>
         <img onclick="tt3();counter3()" class="img2" src="https://www.dl.dropboxusercontent.com/s/3s2kxyvi81386hn/Play.png?dl=0" width="140" height="140">
         <audio id="audio3" src="https://dl.dropboxusercontent.com/s/tu83mhourqf58qh/Banners%20-%20Someone%20To%20You.mp3?dl=0"></audio>
     </div>
-    <div class="container-fluid pt-10 m1">
+    <div class="m1">
         <img class="img1" src="https://dl.dropboxusercontent.com/s/jx085eoxnjapshz/Bars%20and%20Melody%20-%20Lighthouse.jpg?dl=0" width="200" height="200">
         <p style="display: inline;" class="test1">Bars and Melody - Lighthouse</p>
         <img onclick="tt4();counter4()" class="img2" src="https://www.dl.dropboxusercontent.com/s/3s2kxyvi81386hn/Play.png?dl=0" width="140" height="140">
         <audio id="audio4" src="https://dl.dropboxusercontent.com/s/9rg34wyka6kos0q/Bars%20and%20Melody%20-%20Lighthouse.mp3?dl=0"></audio>
     </div>
-    <div class="container-fluid pt-10 m1">
+    <div class="m1">
         <img class="img1" src="https://www.dl.dropboxusercontent.com/s/68cux07xewqc7qm/Cody%20Simpson%20-%20La%20Da%20Dee.jpg?dl=0" width="200" height="200">
         <p style="display: inline;" class="test1">Cody Simpson - La Da Dee</p>
         <img onclick="tt5();counter5()" class="img2" src="https://www.dl.dropboxusercontent.com/s/3s2kxyvi81386hn/Play.png?dl=0" width="140" height="140">
         <audio id="audio5" src="https://www.dl.dropboxusercontent.com/s/3js5fhocvd8o3n1/Cody%20Simpson%20-%20La%20Da%20Dee.mp3?dl=0"></audio>
     </div>
-    <div class="container-fluid pt-10 m1">
+    <div class="m1">
         <img class="img1" src="https://www.dl.dropboxusercontent.com/s/jpytmu5jbzwxafx/Daya%20-%20New.jpg?dl=0" width="200" height="200">
         <p style="display: inline;" class="test1">Daya - New</p>
         <img onclick="tt6();counter6()" class="img2" src="https://www.dl.dropboxusercontent.com/s/3s2kxyvi81386hn/Play.png?dl=0" width="140" height="140">
         <audio id="audio6" src="https://www.dl.dropboxusercontent.com/s/5gn7arr7pld5103/Daya%20-%20New.mp3?dl=0"></audio>
     </div>
-    <div class="container-fluid pt-10 m1">
+    <div class="m1">
         <img class="img1" src="https://www.dl.dropboxusercontent.com/s/wec90if9e72eser/Dream%20-%20Roadtrip.png?dl=0" width="200" height="200">
         <p style="display: inline;" class="test1">Dream - Roadtrip</p>
         <img onclick="tt7();counter7()" class="img2" src="https://www.dl.dropboxusercontent.com/s/3s2kxyvi81386hn/Play.png?dl=0" width="140" height="140">
         <audio id="audio7" src="https://www.dl.dropboxusercontent.com/s/ez9m5wlh0oxuopf/Dream%20-%20Roadtrip.mp3?dl=0"></audio>
     </div>
-    <div class="container-fluid pt-10 m1">
+    <div class="m1">
         <img class="img1" src="https://www.dl.dropboxusercontent.com/s/nn7e44ydr2ods27/Duncan%20Laurence%20-%20Arcade.jpg?dl=0" width="200" height="200">
         <p style="display: inline;" class="test1">Duncan Laurence - Arcade</p>
         <img onclick="tt8();counter8()" class="img2" src="https://www.dl.dropboxusercontent.com/s/3s2kxyvi81386hn/Play.png?dl=0" width="140" height="140">
         <audio id="audio8" src="https://www.dl.dropboxusercontent.com/s/r288a5g58y23qpr/Duncan%20Laurence%20-%20Arcade.mp3?dl=0"></audio>
     </div>
-    <div class="container-fluid pt-10 m1">
+    <div class="m1">
         <img class="img1" src="https://www.dl.dropboxusercontent.com/s/ps0ep22cuycki31/ElyOtto%20-%20SugarCrash%21.png?dl=0" width="200" height="200">
         <p style="display: inline;" class="test1">ElyOtto - SugarCrash!</p>
         <img onclick="tt9();counter9()" class="img2" src="https://www.dl.dropboxusercontent.com/s/3s2kxyvi81386hn/Play.png?dl=0" width="140" height="140">
         <audio id="audio9" src="https://www.dl.dropboxusercontent.com/s/6wt77u6wily5hnr/ElyOtto%20-%20SugarCrash%21.mp3?dl=0"></audio>
     </div>
-    <div class="container-fluid pt-10 m1">
+    <div class="m1">
         <img class="img1" src="https://www.dl.dropboxusercontent.com/s/hfvaa6s201uf2r9/Glee%20The%20Music%2C%20The%20Complete%20Season%20Three%20CD%201%20TRACK%2079%20%28320.jpg?dl=0" width="200" height="200">
         <p style="display: inline;" class="test1">Stereo Hearts - Glee Version</p>
         <img onclick="tt10();counter10()" class="img2" src="https://www.dl.dropboxusercontent.com/s/3s2kxyvi81386hn/Play.png?dl=0" width="140" height="140">
         <audio id="audio10" src="https://www.dl.dropboxusercontent.com/s/mx67eq0ovczrooj/Glee%20The%20Music%2C%20The%20Complete%20Season%20Three%20CD%201%20TRACK%2079%20%28320.mp3?dl=0"></audio>
     </div>
+    <div class="preloader">
+    </div>    
+
 </body>
